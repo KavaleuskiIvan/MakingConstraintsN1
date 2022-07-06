@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     
     let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .brown
+        imageView.image = UIImage(named: "man-talking-on-the-phone") ?? UIImage()
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -57,7 +58,6 @@ class ViewController: UIViewController {
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .cyan
         return scrollView
     }()
     
@@ -159,7 +159,6 @@ class ViewController: UIViewController {
         capabilitiesScrollView.delegate = self
     }
     
-    
     @objc func weeklyPlanButtonPressed() {
         if selectedPlan == .weekly {
             weeklyPlanButton.setUnselected()
@@ -253,16 +252,11 @@ private extension ViewController {
         termsButtonsStackView.heightAnchor.constraint(equalTo: restoreButton.heightAnchor).isActive = true
     }
     
-    func createViews(color: UIColor) -> UIView {
-        let view = UIView()
-        view.backgroundColor = color
-        return view
-    }
-    
     func configureScrollView() {
-        let randomView1 = createViews(color: .lightGray)
-        let randomView2 = createViews(color: .blue)
-        let randomView3 = createViews(color: .black)
+        let randomView1 = CapabilityCell()
+        let randomView2 = CapabilityCell()
+        let randomView3 = CapabilityCell()
+
         pageViews = [randomView1, randomView2, randomView3]
         capabilitiesPageControl.numberOfPages = pageViews.count
 
