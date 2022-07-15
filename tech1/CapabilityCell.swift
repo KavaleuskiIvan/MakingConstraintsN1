@@ -77,37 +77,37 @@ class CapabilityCell: UIView {
         firstImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(50)
             make.top.equalToSuperview().inset(10)
-            make.width.height.equalTo(30)
+            make.width.height.equalTo(35)
         }
         firstLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(110)
             make.top.equalToSuperview().inset(10)
             make.trailing.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(35)
         }
         
         secondImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(50)
             make.top.equalToSuperview().inset(50)
-            make.width.height.equalTo(30)
+            make.width.height.equalTo(35)
         }
         secondLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(110)
             make.top.equalToSuperview().inset(50)
             make.trailing.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(35)
         }
         
         thirdImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(50)
             make.top.equalToSuperview().inset(90)
-            make.width.height.equalTo(30)
+            make.width.height.equalTo(35)
         }
         thirdLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(110)
             make.top.equalToSuperview().inset(90)
             make.trailing.equalToSuperview()
-            make.height.equalTo(30)
+            make.height.equalTo(35)
         }
     }
 }

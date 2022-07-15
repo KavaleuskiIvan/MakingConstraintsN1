@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "man-talking-on-the-phone") ?? UIImage()
+        imageView.image = UIImage(named: "dark-road") ?? UIImage()
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -219,7 +219,7 @@ private extension ViewController {
         restoreButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/4).isActive = true
         restoreButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/20).isActive = true
         
-        numbOfCallsLabel.topAnchor.constraint(equalTo: restoreButton.bottomAnchor, constant: view.frame.height/15).isActive = true
+        numbOfCallsLabel.topAnchor.constraint(equalTo: restoreButton.bottomAnchor, constant: 20).isActive = true
         numbOfCallsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         numbOfCallsLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/13).isActive = true
         numbOfCallsLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 2/3).isActive = true
